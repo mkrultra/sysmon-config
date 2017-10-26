@@ -1,5 +1,5 @@
-copy /z /y "\\domain.com\apps\config.xml" "C:\windows\"
-sysmon -c c:\windows\config.xml
+copy /z /y "\\domain.com\apps\sysmonconfig-export.xml" "C:\windows\"
+sysmon -c c:\windows\sysmonconfig-export.xml
 
 sc query "Sysmon" | Find "RUNNING"
 If "%ERRORLEVEL%" EQU "1" (
